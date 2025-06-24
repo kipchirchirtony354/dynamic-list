@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [items, setItems] = useState(['First Item']);
+  const [items, setItems] = useState(['.First Item']);
   const [newItem, setNewItem] = useState('');
 
   const handleAddItem = () => {
@@ -26,11 +26,13 @@ function App() {
         <button onClick={handleAddItem}>Add Item</button>
       </div>
       
+      <div class="home">
       <ul className="item-list">
         {items.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
       </ul>
+      </div>
     </div>
   );
 }
